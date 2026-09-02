@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "cf-workers-proxy",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-02",
+  "placement": {
+    "region": "aws:us-east-1"
+  }
+}
