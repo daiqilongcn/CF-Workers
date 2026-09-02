@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
-  "name": "cf-workers-proxy",
+  "name": "cf-workers",
   "main": "worker.js",
   "compatibility_date": "2026-09-02",
   "placement": {
