@@ -1,10 +1,6 @@
-// 透明反向代理：把本域名收到的路径原样转发到 zenmux.ai 的同名路径。
-// ZenMux 自身兼容 chat/completions、messages、responses 等多种协议入口，
+// 透明反向代理：把本域名收到的路径原样转发到上游的同名路径。
+// 上游自身兼容 chat/completions、messages、responses 等多种协议入口，
 // 所以这里不做任何路径改写/协议适配，纯透传。
-//   https://daiqilong.cc.cd/api/v1/chat/completions
-//     -> https://zenmux.ai/api/v1/chat/completions
-//   https://daiqilong.cc.cd/v1/messages
-//     -> https://zenmux.ai/v1/messages
 const UPSTREAM_ORIGIN = "https://zenmux.ai";
 
 // 逐跳(header)不能跨代理透传：Workers 会根据上游 URL 自行重算 Host、
